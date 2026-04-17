@@ -52,6 +52,10 @@ const server = net.createServer(async (socket) => {
 			const progress = ((uploadedBytes / fileSize) * 100).toFixed(2);
 			socket.write(`Progress: ${progress}%\n`);
 
+			if (uploadedBytes === fileSize) {
+				socket.write("File sucessfully uploaded");
+			}
+
 			if (!canContinue) {
 				socket.pause();
 			}
@@ -65,4 +69,4 @@ const server = net.createServer(async (socket) => {
 	});
 });
 
-server.listen(5050, () => console.log("Server is running..."));
+server.listen(5050, "172.31.29.201", () => console.log("Server is running..."));
