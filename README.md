@@ -26,7 +26,7 @@ O projeto possui um cliente que envia um arquivo para um servidor e um servidor 
 .
 ├── client.js       # Cliente responsável pelo envio do arquivo
 ├── server.js       # Servidor TCP responsável pelo recebimento
-├── constants.js    # Endereço do servidor utilizado pelo cliente
+├── constants.js    # Endereço do servidor utiligitzado pelo cliente
 └── storage/        # Diretório onde os arquivos recebidos são salvos
 ```
 
